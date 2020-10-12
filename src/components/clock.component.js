@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Badge } from "react-bootstrap";
 
 export default class Clock extends Component {
   constructor(props) {
@@ -23,7 +24,8 @@ export default class Clock extends Component {
   render() {
     return(
       <div>
-        <h2>{this.state.date.toLocaleTimeString()}</h2>
+        <h1>{this.state.date.toLocaleTimeString()}</h1>
+        <Badge pill variant="light">{this.state.date.toLocaleDateString().split('/').join(' - ')}</Badge>
       </div>
     )
   }

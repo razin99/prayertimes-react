@@ -64,16 +64,21 @@ export default class Timings extends Component {
       <div>
         {["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"].map((timing) => (
           <>
-            <h1>
-              <Badge variant="dark">{timing}</Badge>{" "}
-              <Badge variant="primary">
-                {this.state[timing.toLocaleLowerCase()]}
-              </Badge>
-            </h1>
+            <div className="m-3">
+              <h1>
+                <Badge variant="dark">{timing}</Badge>{" "}
+                <Badge variant="primary">
+                  {this.state[timing.toLocaleLowerCase()]}
+                </Badge>
+              </h1>
+            </div>
           </>
         ))}
-        <div className="fixed-bottom mb-4" >
-          <h3><Badge variant="secondary">{this.state.latitude}</Badge>{" "}<Badge variant="secondary">{this.state.longitude}</Badge></h3>
+        <div className="fixed-bottom mb-4">
+          <h3>
+            <Badge variant="secondary">{this.state.latitude}</Badge>{" "}
+            <Badge variant="secondary">{this.state.longitude}</Badge>
+          </h3>
         </div>
       </div>
     );

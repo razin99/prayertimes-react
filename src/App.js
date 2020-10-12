@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App" >
       <div className="jumbotron bg-dark" style={{color:"white"}}>
-        <h1>Current time:</h1>
         <Clock />
       </div>
       <h1>Prayer times</h1>
